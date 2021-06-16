@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("./img/bg5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .calc__history-value{
+    grid-column: span 4;
+    height: 40px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px 10px 0 0;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.container .calc__output-value{
+    grid-column: span 4;
+    height: 70px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+}
+
+.calc__keyboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.calc__keyboard span{
+    text-align: center;
+    width: 75px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 40px;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.calc__empty{
+    padding-bottom: 55px;
+}
+
+.calc__keyboard span:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.calc__keyboard span:active{
+    background: #075f4c;
+    transition: 0.2s;
+    color: #122975;
+}
+
+#clear{
+    background: rgba(255, 255, 255, 0.1);
+}
